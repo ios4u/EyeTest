@@ -65,7 +65,7 @@
             
         case UIImageOrientationDown: //EXIF = 3
             transform = CGAffineTransformMakeTranslation(imageSize.width, imageSize.height);
-            transform = CGAffineTransformRotate(transform, M_PI);
+            transform = CGAffineTransformRotate(transform, (CGFloat) M_PI);
             break;
             
         case UIImageOrientationDownMirrored: //EXIF = 4
@@ -79,7 +79,7 @@
             bounds.size.width = boundHeight;
             transform = CGAffineTransformMakeTranslation(imageSize.height, imageSize.width);
             transform = CGAffineTransformScale(transform, -1.0, 1.0);
-            transform = CGAffineTransformRotate(transform, 3.0 * M_PI / 2.0);
+            transform = CGAffineTransformRotate(transform, (CGFloat) (3.0 * M_PI / 2.0));
             break;
             
         case UIImageOrientationLeft: //EXIF = 6
@@ -87,7 +87,7 @@
             bounds.size.height = bounds.size.width;
             bounds.size.width = boundHeight;
             transform = CGAffineTransformMakeTranslation(0.0, imageSize.width);
-            transform = CGAffineTransformRotate(transform, 3.0 * M_PI / 2.0);
+            transform = CGAffineTransformRotate(transform, (CGFloat) (3.0 * M_PI / 2.0));
             break;
             
         case UIImageOrientationRightMirrored: //EXIF = 7
@@ -95,7 +95,7 @@
             bounds.size.height = bounds.size.width;
             bounds.size.width = boundHeight;
             transform = CGAffineTransformMakeScale(-1.0, 1.0);
-            transform = CGAffineTransformRotate(transform, M_PI / 2.0);
+            transform = CGAffineTransformRotate(transform, (CGFloat) (M_PI / 2.0));
             break;
             
         case UIImageOrientationRight: //EXIF = 8
@@ -103,7 +103,7 @@
             bounds.size.height = bounds.size.width;
             bounds.size.width = boundHeight;
             transform = CGAffineTransformMakeTranslation(imageSize.height, 0.0);
-            transform = CGAffineTransformRotate(transform, M_PI / 2.0);
+            transform = CGAffineTransformRotate(transform, (CGFloat) (M_PI / 2.0));
             break;
             
         default:
